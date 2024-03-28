@@ -1,6 +1,8 @@
 
 import './App.css'
-import StateFull from './Component/StateFullForm/StateFull';
+import HookForm from './Component/HookForm/HookForm';
+import RefForm from './Component/RefForm/RefForm';
+// import StateFull from './Component/StateFullForm/StateFull';
 
 function App() {
    // const handlesSubmitted = (e) =>{
@@ -21,7 +23,9 @@ function App() {
           <input type="text" name="Phone" id="" placeholder='Phone' className='border-2 border-red-400' /> <br />
           <input type="submit" value="Submit" className='border-2 border-blue-400' />
        </form> */}
-       <StateFull></StateFull>
+       {/* <StateFull></StateFull> */}
+       {/* <RefForm></RefForm> */}
+       <HookForm></HookForm>
     </>
   )
 }
