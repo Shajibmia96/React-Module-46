@@ -2,6 +2,7 @@
 import './App.css'
 import HookForm from './Component/HookForm/HookForm';
 import RefForm from './Component/RefForm/RefForm';
+import ReusableForm from './Component/ReusableForm/ReusableForm';
 // import StateFull from './Component/StateFullForm/StateFull';
 
 function App() {
@@ -12,6 +13,14 @@ function App() {
    //      console.log(e.target.Phone.value)
    //     console.log("Submitted your documents")
    // }
+
+    const handleSubmit = e =>{
+        e.preventDefault()
+    }
+
+    const handleProfile = e =>{
+        e.preventDefault()
+    }
 
   return (
     <>
@@ -25,7 +34,16 @@ function App() {
        </form> */}
        {/* <StateFull></StateFull> */}
        {/* <RefForm></RefForm> */}
-       <HookForm></HookForm>
+       {/* <HookForm></HookForm> */}
+       <ReusableForm 
+       formTitle={'Sing Up'}
+       handlesSubmitted={handleSubmit}
+       ></ReusableForm>
+       <ReusableForm
+       formTitle={'Profile update'}
+       BtnText={'Update'}
+       handlesSubmitted={handleProfile}
+       ></ReusableForm>
     </>
   )
 }
