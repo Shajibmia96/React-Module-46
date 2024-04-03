@@ -1,8 +1,9 @@
 
-import { data } from 'autoprefixer';
+// import { data } from 'autoprefixer';
 import './App.css'
+import Granpa from './Component/GranPa/Granpa'
 
-import ReusableForm from './Component/ReusableForm/ReusableForm';
+// import ReusableForm from './Component/ReusableForm/ReusableForm';
 // import StateFull from './Component/StateFullForm/StateFull';
 
 function App() {
@@ -14,13 +15,13 @@ function App() {
    //     console.log("Submitted your documents")
    // }
 
-    const handleSubmit = data =>{
-        console.log(data)
-    }
+    // const handleSubmit = data =>{
+    //     console.log(data)
+    // }
 
-    const handleProfile = data=>{
-      console.log(data)
-    }
+    // const handleProfile = data=>{
+    //   console.log(data)
+    // }
 
   return (
     <>
@@ -35,14 +36,14 @@ function App() {
        {/* <StateFull></StateFull> */}
        {/* <RefForm></RefForm> */}
        {/* <HookForm></HookForm> */}
-       <ReusableForm submitTitle={'Sing up'}
+       {/* <ReusableForm submitTitle={'Sing up'}
                      handlesSubmitted={handleSubmit}
        >
          <div>
             <h1>Sing up</h1>
             <p>please Sing up first</p>
-         </div>
-       </ReusableForm>
+         </div> */}
+       {/* </ReusableForm>
        <ReusableForm submitTitle={'Profile update'}
                      handleBtnText={'Profile update'}
                      handlesSubmitted={handleProfile}
@@ -51,7 +52,9 @@ function App() {
             <h1>Update your Profile</h1>
             <p>Please keep update yours profile </p>
          </div>
-       </ReusableForm>
+       </ReusableForm> */}
+
+       <Granpa></Granpa>
     </>
   )
 }
