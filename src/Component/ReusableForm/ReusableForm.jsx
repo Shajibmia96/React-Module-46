@@ -1,22 +1,24 @@
-const ReusableForm = ({formTitle ,BtnText='Submit', handlesSubmitted }) => {
+
+
+const ReusableForm = ({submitTitle , handlesSubmitted, handleBtnText='Submit', children }) => {
 
         const handleLocalSubmit = e =>{
-             e.preventDefault();
+             e.preventDefault()
              const data = {
                 name : e.target.name.value,
                 email : e.target.email.value,
-                password : e.target..pasvalue
+                password : e.target.password .value
              }
              handlesSubmitted(data)
         }
-    return (  
-        <div> 
-             <h1 className="text-2xl mb-2">{formTitle}</h1>
-         <form  onSubmit={handleLocalSubmit}>
-          <input type="text" name="name" id="" placeholder='Name' className='border-2 border-red-400' /> <br />
-          <input type="text" name="email" id="" placeholder='E-mail' className='border-2 border-red-400' /> <br />
-          <input type="text" name="password" id="" placeholder='password' className='border-2 border-red-400' /> <br />
-          <input type="submit" value={BtnText} className='border-2 border-blue-400' />
+    return (
+        <div>
+        <form  onSubmit={handleLocalSubmit}>
+          {children}
+          <input type="text"  name="name" id="" placeholder='Name' className='border-2 border-red-400' /> <br />
+          <input type="email"  name="email" id="" placeholder='E-mail' className='border-2 border-red-400' /> <br />
+          <input type="password"  name="password" id="" placeholder='password' className='border-2 border-red-400' /> <br />
+          <input type="submit" value={handleBtnText} className='border-2 border-blue-400' />
        </form> 
         </div>
     );
